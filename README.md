@@ -1,22 +1,9 @@
-# portfolio
+# Jonathan Fernandes' Portfolio
 
-> Portfolio Website for Jonathan Fernandes
+## My Info
+Jonathan Fernandes
+__Front End Vue.js Developer__
+Currently building freelance projects and looking for part-time or contract work
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+Orlando, FL
+I can be reached at[(407) 495-9514](tel:4074959514) or by [email](mailto:jonathan@teamboxfort.com)
