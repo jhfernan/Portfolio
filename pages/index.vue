@@ -2,7 +2,7 @@
 	<v-layout align-center column justify-center>
 		<v-flex xs12 sm8 md6>
 			<div class="text-xs-center">
-				Hello World
+				<h1>Hello World!</h1>
 			</div>
 		</v-flex>
 	</v-layout>
