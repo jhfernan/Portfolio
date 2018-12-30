@@ -33,7 +33,8 @@ export default {
 				{ name: 'Work', to: '/' },
 				{ name: 'About', to: '/about' },
 				{ name: 'Resume', to: '/resume' },
-				{ name: 'contact', to: '/contact' },
+				{ name: 'Contact', to: '/contact' },
+				{ name: 'Login', to: '/login' }
 			],
 		}
 	}

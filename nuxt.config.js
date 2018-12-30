@@ -1,3 +1,4 @@
+const config = require('./app.config')
 const pkg = require("./package");
 
 module.exports = {
@@ -21,10 +22,8 @@ module.exports = {
 		]
 	},
 
-	// Axios module configuration
-	axios: {
-		// See https://github.com/nuxt-community/axios-module#options
-	},
+	auth: config.auth,
+	axios: config.axios,
 
 	// Global CSS
 	css: ["~/assets/style/app.styl"],
@@ -33,12 +32,16 @@ module.exports = {
 
 	// Nuxt.js modules
 	modules: [
-		// Doc: https://github.com/nuxt-community/axios-module#usage
-		"@nuxtjs/axios"
+		'@nuxtjs/auth',
+		'@nuxtjs/axios'
 	],
 
 	// Plugins to load before mounting the App
-	plugins: ["@/plugins/vuetify"],
+	plugins: [
+		'@/plugins/vuetify'
+	],
+
+	serverMiddleware: config.middleware,
 
 	// Build configuration
 	build: {
