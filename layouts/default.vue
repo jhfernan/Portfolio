@@ -1,5 +1,5 @@
 <template>
-	<v-app light>
+	<v-app class="grey lighten-2" light>
 		<navigation />
 		<v-content>
 			<nuxt />
