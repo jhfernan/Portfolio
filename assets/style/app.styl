@@ -1,6 +1,13 @@
 // Import Vuetify styling
 @require '~vuetify/src/stylus/main.styl'
 
+// Spacing
+$xs = 0.75rem
+$sm = 1.25rem
+$md = 1.75rem
+$lg = 2rem
+$xl = 3rem
+
 .text-unstyled
 	text-decoration: none
 
@@ -26,3 +33,12 @@
 @media (min-width: 1200px)
 	.cb-container
 		max-width: 1140px
+
+div.markdown
+	font-size: 1.1rem
+	hr
+		margin: $md 0 $sm
+	ul
+		margin-left: $sm
+	p, ul
+		margin-bottom: $xs
