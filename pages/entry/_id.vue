@@ -21,11 +21,14 @@
 			<v-flex xs12 md6 lg9>
 				<v-container grid-list-sm>
 					<v-layout align-center row wrap>
-						<v-flex :key="i" v-for="(img, i) in portfolio.images" xs12 md6>
-							<v-img :src="`${env == 'http://localhost:3000'
-								? 'http://localhost:8000'
-								: 'https://jhfernan-api.herokuapp.com/'
-							}${img}`" />
+						<v-flex class="mb-3" :key="i" v-for="(img, i) in portfolio.images" xs12 md6>
+							<v-img
+								contain
+								height="250px"
+								:src="`${env == 'http://localhost:3000'
+									? 'http://localhost:8000'
+									: 'https://jhfernan-api.herokuapp.com/'
+								}${img}`" />
 						</v-flex>
 					</v-layout>
 				</v-container>
