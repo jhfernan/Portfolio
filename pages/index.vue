@@ -5,7 +5,11 @@
 				<v-card
 					:class="portfolio.hovered ? 'cb-overlay pa-3' : 'pa-3'"
 					:to="`/entry/${portfolio.id}`">
-					<v-img contain height="250px" :src="portfolio.images[0]">
+					<v-img contain height="250px"
+						:src="`${env == 'http://localhost:3000'
+							? 'http://localhost:8000'
+							: 'https://jhfernan-api.herokuapp.com/'
+						}${portfolio.images[0]}`">
 						<v-container fill-height fluid>
 							<v-layout
 								align-center
@@ -31,9 +35,16 @@ export default {
 				entry.hovered = false
 				response.push(entry)
 			}
-			return { portfolios: response }
+			return {
+				portfolios: response,
+			}
 		})
 		.catch(err => { error({ statusCode: '404', message: 'Could not retrieve portfolios' }) })
+	},
+	data () {
+		return {
+			env: ''
+		}
 	},
 	head () {
 		return {
@@ -45,7 +56,7 @@ export default {
 	},
 	middleware: 'guest',
 	mounted () {
-		console.log(process.env)
+		this.env = window.location.origin
 	}
 }
 </script>

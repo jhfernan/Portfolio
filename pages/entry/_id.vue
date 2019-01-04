@@ -22,7 +22,10 @@
 				<v-container grid-list-sm>
 					<v-layout align-center row wrap>
 						<v-flex :key="i" v-for="(img, i) in portfolio.images" xs12 md6>
-							<v-img :src="img" />
+							<v-img :src="`${env == 'http://localhost:3000'
+								? 'http://localhost:8000'
+								: 'https://jhfernan-api.herokuapp.com/'
+							}${img}`" />
 						</v-flex>
 					</v-layout>
 				</v-container>
@@ -42,6 +45,11 @@ export default {
 		})
 		.catch(err => { error({ statusCode: '404', message: 'Could not retrieve portfolios' }) })
 	},
+	data () {
+		return {
+			env: ''
+		}
+	},
 	head () {
 		return {
 			title: 'Manage Users',
@@ -54,5 +62,8 @@ export default {
 		}
 	},
 	middleware: 'guest',
+	mounted () {
+		this.env = window.location.origin
+	}
 }
 </script>
