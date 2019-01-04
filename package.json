@@ -4,6 +4,9 @@
 	"description": "Portfolio Website for Jonathan Fernandes",
 	"author": "Jonathan Fernandes",
 	"private": true,
+	"engines": {
+		"node": "10.12.0"
+	},
 	"scripts": {
 		"dev": "nuxt",
 		"build": "nuxt build",

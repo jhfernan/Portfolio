@@ -44,6 +44,9 @@ export default {
 		}
 	},
 	middleware: 'guest',
+	mounted () {
+		console.log(process.env)
+	}
 }
 </script>
 
